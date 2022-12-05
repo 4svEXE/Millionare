@@ -1,0 +1,216 @@
+.level_editor{
+	width: 100%; height: 100vh;
+	padding-top: 80px;
+	position: absolute;
+	right: -100%;
+	transition: .5s;
+	background-color: #27247f;
+	justify-content: space-between !important;
+	font-size: 1.4em !important;
+}
+.level_editor.active{
+	right: 0px;
+}
+.psewdo{
+	width: 15%;height: 100vh;
+}
+.editor{
+	width: 50%;height: 90vh;
+	/*margin-left: 100px;*/
+	justify-content: flex-start !important;
+}
+.select_answers{
+	width: 100%;
+}
+.qwest_constructor span, .qwest_constructor input, #save_button, #add_qwestion{
+	width: 70%;
+	font-size: 0.8em;
+	position: relative;
+	border-radius: 8px;
+	border: 1px solid #1959d6;
+	background-color: #03003c;
+	color: #d2c1f1;
+	padding: 10px;
+	transition: .3s;
+	cursor: pointer;
+}
+.select_level input{
+	width: 40px;height: 40px;
+	transition: .3s;
+	cursor: pointer;
+}
+.nav{
+	cursor: pointer;
+}
+.nav:hover, .select_qwestion textarea:focus, #new_level, #add_qwestion:hover , .new_answer:focus, #save_button:hover{
+	border: 1px solid #6d93d9;
+	background-color: #191751;
+	color: #fff;
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+	-moz-box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+	box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+}
+.save_button{
+	/*position: absolute; top: 0px;*/
+}
+.select_qwestion{
+	margin: 10px;
+}
+.select_qwestion textarea{
+	padding: 5px;
+	width: 300px;
+	height: 100px;
+	min-width: 300px;
+	max-width: 400px;
+	max-height: 100px;
+	font-size: 16px;
+}
+#add_qwestion{
+	margin: 10px;
+	width: auto;
+}
+
+.setting_title{
+	width: 400px;
+	margin-top: 7px;
+	background-color: #000425 !important;
+	text-align: center;
+}
+
+/*??????????????????????*/
+.nav_menu{
+	width: 20%;height: 100%;
+	padding-top: 70px;
+	background-color: #0b0b45;
+	border-left: 1px solid #1959d6;
+
+	align-content: flex-start !important;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.level_point{
+	width: 100%;
+	align-content: flex-start !important;
+}
+.point_title{
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding: 5px;
+	background-color: #13137b;
+	color: #fff;
+	font-size: 14px;
+}
+
+.level_title, .select_qwestion textarea{
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding: 10px;
+	background-color: #f00;
+	transition: .3s;
+	cursor: pointer;
+	font-size: 14px;
+	position: relative;
+	border-radius: 8px;
+	border: 1px solid #1959d6;
+	background-color: #03003c;
+	color: #b9b8d7;
+
+	-webkit-box-shadow: 0px 0px 30px 1px rgba(9, 75, 126, 0.5);
+	-moz-box-shadow: 0px 0px 30px 1px rgba(9, 75, 126, 0.5);
+	box-shadow: 0px 0px 30px 1px rgba(9, 75, 126, 0.5);
+}
+.level_title:hover{
+	border: 1px solid #6d93d9;
+	background-color: #191751;
+	color: #fff;
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+	-moz-box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+	box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+}
+.level_title.range{
+	background-color: #1959d6;
+}
+
+.qwestions_cont{
+	width: 80%;
+	height: 0px;
+	opacity: 0;
+	overflow: hidden;
+	transition: .5s;
+	transform: translateX(100%);
+}
+.qwestions_cont.active{
+	height: 100%;
+	opacity: 1;
+	overflow: inherit;
+	transition: .5s;
+	transform: translateX(0%);
+}
+
+.qwest{
+	width: 100%;
+	height: 30px;
+	padding: 9px;margin: 1px;
+	justify-content: space-between !important;
+	transition: .3s;
+
+	border-radius: 5px;
+	background-color: #03003c;
+	color: #b9b8d7;
+
+	-webkit-box-shadow: 0px 0px 30px 1px rgba(9, 75, 126, 0.5);
+	-moz-box-shadow: 0px 0px 30px 1px rgba(9, 75, 126, 0.5);
+	box-shadow: 0px 0px 30px 1px rgba(9, 75, 126, 0.5);
+}
+.qwest:nth-child(2n){
+	background-color: #171751;
+}
+.qwest:hover{
+	background-color: #191751;
+	color: #fff;
+	-webkit-box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+	-moz-box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+	box-shadow: 0px 0px 30px 5px rgba(33, 139, 221, 0.5);
+}
+
+.qwest span{
+	max-width: 60%;
+	height: 10px;
+	font-size: 12px;
+}
+.qwest input:disabled{
+	max-width: 60%;
+	height: 12px;
+	font-size: 12px;
+	color: #b9b8d7;
+	background-color: rgba(0, 0, 0, 0);
+	transition: .3s;
+}
+.qwest:hover input{
+	color: #fff;
+}
+
+.level_point button{
+	width: 25px;height: 25px;
+	padding: 0px;margin: -4px;
+	transition: .3s;
+	cursor: pointer;
+	border-radius: 50%;
+	background-color: #191751;
+	color: #b9b8d7;
+	border: 1px solid #6d93d9;
+
+}
+.level_point button:hover{
+	transform: scale(1.1);
+	background-color: #03003c;
+	color: #fff;
+}
+
+.add_qwest{
+	position: absolute;
+	right: 5px;
+}

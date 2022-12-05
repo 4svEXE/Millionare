@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" rel="stylesheet" type="text/css"/>
+	<link href="css/level_editor.css" rel="stylesheet" type="text/css"/>
+	<link href="css/scrollBarStyle.css" rel="stylesheet" type="text/css"/>
+	<link href="css/tooltip.css" rel="stylesheet" type="text/css"/>
+	<link href="css/sv.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="img/ico.svg" type="image/png">
+	<title>кто хочет стать миллионером</title>
+	<script src="js/sv.js" async></script>
+</head>
+<body>
+	<div class="wrapper flex">
+		<div class="loader"></div>
+
+		<div class="header flex">
+			<img src="img/logo.png" class="logo">
+
+			<div class="player flex">
+				<img src="img/avatars/user-ninja.svg" class="player_avatar">
+				<div class="avatars flex">
+
+				</div>
+
+				<input type="text" value="player name" id="player_name" disabled>
+
+				<img src="img/icons/edit.svg" class="setting_button" id="change_name">
+			</div>
+			<div class="settings flex">
+				<img src="img/icons/menu.svg" class="setting_button" id="set_menu">
+				<img src="img/icons/sound-off.svg" class="setting_button disable" id="sound">
+				<img src="img/icons/full-screen-on.svg" class="setting_button" id="full_screen">
+			</div>
+		</div>
+		
+		<video src="video/intro.mp4" id="video_bg"></video>
+		<div class="audio"><audio id="audio" src="audio/0.mp3" autobuffer></audio></div>
+		
+		<div class="scene">
+			<div class="game_room flex">
+				<div class="qwest_zone flex col">
+					<img src="img/logo.png" class="logo">
+
+					<div class="time_box">
+						<div class="time"></div>
+					</div>
+
+					<div class="screen">
+						<div class="qwestion"></div>
+						<div class="answers flex">
+							<div class="answer menu_button"></div>
+							<div class="answer menu_button"></div>
+							<div class="answer menu_button"></div>
+							<div class="answer menu_button"></div>
+						</div>
+					</div>
+				</div>
+				<div class="progress_zone flex col">
+					<div class="bonuses flex">
+						<div tooltip="залишається 2 варіанта на 5 секунд"><img src="img/icons/percent.svg" class="setting_button" id="percent"></div>
+						
+						<div tooltip="варіант вірний на 80%"><img src="img/icons/call.svg"  class="setting_button" id="call"></div>
+						
+						<div tooltip="варіант вірний на 90%"><img src="img/icons/peoples.svg"  class="setting_button" id="peoples"></div>
+						
+					</div>
+
+					<div class="progress_bar flex col">
+						<div class="point flex">
+							<span>1</span><span>100$</span>
+						</div>
+						<div class="point flex">
+							<span>2</span><span>500$</span>
+						</div>
+						<div class="point flex">
+							<span>3</span><span>1 000$</span>
+						</div>
+						<div class="point flex">
+							<span>4</span><span>2 000$</span>
+						</div>
+						<div class="point flex">
+							<span>5</span><span>5 000$</span>
+						</div>
+						<div class="point flex">
+							<span>6</span><span>10 000$</span>
+						</div>
+						<div class="point flex">
+							<span>7</span><span>15 000$</span>
+						</div>
+						<div class="point flex">
+							<span>8</span><span>30 000$</span>
+						</div>
+						<div class="point flex">
+							<span>9</span><span>50 000$</span>
+						</div>
+						<div class="point flex">
+							<span>10</span><span>100 000$</span>
+						</div>
+						<div class="point flex">
+							<span>11</span><span>150 000$</span>
+						</div>
+						<div class="point flex">
+							<span>12</span><span>300 000$</span>
+						</div>
+						<div class="point flex">
+							<span>13</span><span>500 000$</span>
+						</div>
+						<div class="point flex">
+							<span>14</span><span>700 000$</span>
+						</div>
+						<div class="point flex">
+							<span>15</span><span>1 000 000$</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="flex col">
+				<button class="menu_button" id="new_game"> НОВА ГРА </button>
+				<button class="menu_button" disabled id="resume"> ПРОДОВЖИТИ ГРУ </button>
+				<button class="menu_button" id="level_editor"> РЕДАКТОР РІВНІВ </button>
+				<button class="menu_button" id="exit"> ВИЙТИ </button>
+			</div>
+		</div>
+
+		<div class="level_editor flex">
+			<div class="psewdo"></div>
+			<div class="editor flex col">
+				<div class="qwest_constructor flex col">
+
+					<span class="setting_title">Конструктор рівнів</span>
+
+					<div class="select_level flex">
+						<span class="setting_title">Вибери рівень: </span>
+						<div class="flex">
+							<input type="button" class="nav" value="<">
+							<input type="text" id="new_level" disabled value="1">
+							<input type="button" class="nav" value=">">
+						</div>
+					</div>
+
+					<div class="select_qwestion flex">
+						<span class="setting_title">Напиши питання: </span>
+						<textarea id="new_qestion"></textarea>
+					</div>
+
+					<div class="select_answers flex col">
+						<span class="setting_title">Вірна відповідь: </span>
+						<input type="text" class="new_answer">
+						<span class="setting_title">Не вірні відповіді: </span>
+						<input type="text" class="new_answer">
+						<input type="text" class="new_answer">
+						<input type="text" class="new_answer">
+					</div>
+
+					<input type="button" id="add_qwestion" value="ЗБЕРЕГТИ ПИТАННЯ">
+
+					<div class="save_button"></div>
+
+				</div>
+			</div>
+
+			<div class="nav_menu flex">
+				<div class="level_point flex"></div>
+			</div>
+		</div>
+
+		<div class="messages flex">
+			<div class="message qwestion"></div>
+		</div>
+	</div>
+</body>
+
+</html>

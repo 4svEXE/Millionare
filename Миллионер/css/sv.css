@@ -1,0 +1,32 @@
+/*   mini bootstrap   */
+.flex{
+	display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.col{
+  display: flex;
+  flex-direction: column
+}
+/*   mini bootstrap   */
+
+/*fonts*/
+
+@font-face {
+  font-family: "Roboto"; 
+  src: url("fonts/Roboto-Regular.ttf"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+@font-face {
+  font-family: "Roboto-Black"; 
+  src: url("fonts/Roboto-Black.ttf"); 
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+/*fonts*/
